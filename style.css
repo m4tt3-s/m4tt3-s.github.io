@@ -13,7 +13,7 @@ body, html {
     left: 0;
 }
 
-#home img {
+#home img, #ticket img {
     width: 100%;
     height: 100%;
 }
@@ -21,6 +21,8 @@ body, html {
 #ticket {
     z-index: 10;
     display: none; /* Initially hidden */
+    transform: translateY(100%); /* Start off-screen */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding in */
 }
 
 #clock {
@@ -34,25 +36,6 @@ body, html {
     height: 80%; /* 4/5 of the space */
 }
 
-#train img {
-    width: 100%;
-    height: 100%;
-}
-
 .hidden {
     display: none;
-}
-
-@keyframes slideInUp {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-.slide-in {
-    animation: slideInUp 0.5s forwards; /* Adjust time as needed */
-    display: block;
 }

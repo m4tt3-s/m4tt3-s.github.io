@@ -1,7 +1,9 @@
 document.getElementById('home').addEventListener('click', function() {
     var ticket = document.getElementById('ticket');
-    ticket.classList.remove('hidden'); // Ensure it's not marked as hidden
-    ticket.classList.add('slide-in'); // Apply the slide-in animation
+    ticket.style.display = 'block'; // Ensure it's visible
+    setTimeout(() => {
+        ticket.style.transform = 'translateY(0)'; // Slide in
+    }, 10); // Timeout to ensure the transition is applied after display changes
 });
 
 let ticketState = 1; // Track which ticket is showing
