@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
+    font-family: Arial, sans-serif;
 }
 
 #home, #ticket {
@@ -13,9 +14,14 @@ body, html {
     left: 0;
 }
 
-#home img, #ticket img {
+#home img {
     width: 100%;
     height: 100%;
+}
+
+#ticket img {
+    width: 100%;
+    height: 80%;
 }
 
 #ticket {
@@ -26,11 +32,16 @@ body, html {
 }
 
 #clock {
-    width: 100%;
-    top: 0;
-    height: 20%; /* 1/5 of the space */
+    height: 20vh;
     background-color: white;
-    padding: 10px;
+
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse; 
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .date-time-container, .text-oval-container {
@@ -40,15 +51,15 @@ body, html {
 }
 
 .text {
-    color: lightblue;
+    color: #3C71FA;
     font-weight: bold;
     font-size: 5em; /* Adjusted size */
 }
 
 .oval {
-    background-color: darkblue;
+    background-color: #1A2C5C;
     color: white;
-    border-radius: 50px; /* Creates the oval shape */
+    border-radius: 60px; /* Creates the oval shape */
     padding: 10px 40px; /* Adjusted padding */
     font-weight: bold;
     font-size: 5em; /* Adjusted size */
@@ -61,8 +72,7 @@ body, html {
 }
 
 #train {
-    width: 100%;
-    height: 80%; /* 4/5 of the space */
+    height: 100vh;
 }
 
 .hidden {

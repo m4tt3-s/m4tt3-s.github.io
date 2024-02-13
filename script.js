@@ -17,3 +17,13 @@ document.getElementById('ticket').addEventListener('click', function() {
         ticketState = 1;
     }
 });
+
+function updateDateTime() {
+    const now = new Date();
+    const currentDateElement = document.getElementById('currentDate');
+    const currentTimeElement = document.getElementById('currentTime');
+    currentDateElement.textContent = now.toLocaleDateString('en-US');
+    currentTimeElement.textContent = now.toLocaleTimeString('en-US');
+}
+
+setInterval(updateDateTime, 1000); // Update the date and time every second
