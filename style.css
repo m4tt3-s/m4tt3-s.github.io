@@ -33,7 +33,7 @@ body, html {
 }
 
 #wrec {
-    height: 20vh;
+    height: 25vh;
     background-color: white;
 
     top: 0;
@@ -41,7 +41,7 @@ body, html {
 }
 
 #topwrec {
-    height: 13vh;
+    height: 16vh;
     background-color: white;
     /* background-color: yellow; */
     display: flex;
@@ -76,7 +76,7 @@ body, html {
 }
 
 #botwrec {
-    height: 7vh;
+    height: 9vh;
     background-color: white;
     /* background-color: green; */
     display: flex;
@@ -104,7 +104,7 @@ body, html {
 
 
 #train {
-    height: 80vh;
+    height: 75vh;
 }
 
 .hidden {
