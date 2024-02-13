@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Allows full-screen mode on iPhone -->
-    <link rel="apple-touch-icon" href="icon.png"> <!-- Home Screen Icon -->
-    <title>Your Web App Title</title> <!-- Web App Title -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="path/to/icon.png">
+    <title>Your Web App Title</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Prevent caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 </head>
 <body>
     <div id="clock" class="clock"></div>
     <div id="imageContainer" class="image-container">
-        <img src="home.png" alt="Initial Image" id="mainImage">
+        <img src="image1.jpg" alt="Initial Image" id="mainImage">
     </div>
     <script src="script.js"></script>
 </body>
