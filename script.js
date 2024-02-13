@@ -1,6 +1,7 @@
 document.getElementById('home').addEventListener('click', function() {
-    document.getElementById('ticket').style.display = 'block'; // Show ticket div
-    document.getElementById('ticket').classList.add('slide-in'); // Add animation class if needed
+    var ticket = document.getElementById('ticket');
+    ticket.classList.remove('hidden'); // Ensure it's not marked as hidden
+    ticket.classList.add('slide-in'); // Apply the slide-in animation
 });
 
 let ticketState = 1; // Track which ticket is showing

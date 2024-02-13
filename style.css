@@ -42,3 +42,17 @@ body, html {
 .hidden {
     display: none;
 }
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideInUp 0.5s forwards; /* Adjust time as needed */
+    display: block;
+}
