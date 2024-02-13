@@ -1,0 +1,62 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 80%; /* Adjust to make room for the info box */
+    position: absolute;
+    bottom: 0;
+}
+
+.info-box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse; /* Adjust the order of elements */
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 20%; /* 1/5 of the screen */
+}
+
+.date-time-container, .text-oval-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    color: lightblue;
+    font-weight: bold;
+    font-size: 5em; /* Adjusted size */
+}
+
+.oval {
+    background-color: darkblue;
+    color: white;
+    border-radius: 50px; /* Creates the oval shape */
+    padding: 10px 40px; /* Adjusted padding */
+    font-weight: bold;
+    font-size: 5em; /* Adjusted size */
+}
+
+.date, .time {
+    font-weight: bold;
+    color: black;
+    font-size: 2em; /* Adjusted size */
+}

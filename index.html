@@ -2,31 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-
-    <link rel="apple-touch-icon" href="icon.png">
-    
-    <title>Web App</title>
-    <link rel="stylesheet" href="style.css?v=1.1">
-    <script src="script.js?v=1.1"></script>
+    <title>Simple Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="imageContainer" class="image-container">
-        <img src="home.png" alt="Home" id="mainImage">
-        <div id="infoBox" class="info-box hide">
-            <div class="date-time-container">
-                <div class="date" id="currentDate"></div>
-                <div class="time" id="currentTime"></div>
-            </div>
-            <div class="text-oval-container">
-                <div class="text">1-2</div>
-                <div class="oval">XC</div>
-            </div>
-        </div>
+
+<div id="home">
+    <img src="home.png" alt="Home">
+</div>
+
+<div id="ticket" class="hidden">
+    <div id="clock"></div>
+    <div id="train">
+        <img src="ticket1.png" id="ticketImage" alt="Ticket">
     </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
