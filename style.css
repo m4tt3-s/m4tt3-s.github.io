@@ -22,13 +22,42 @@ body, html {
     z-index: 10;
     display: none; /* Initially hidden */
     transform: translateY(100%); /* Start off-screen */
-    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding in */
+    transition: transform 0.2s ease-in-out; /* Smooth transition for sliding in */
 }
 
 #clock {
     width: 100%;
+    top: 0;
     height: 20%; /* 1/5 of the space */
     background-color: white;
+    padding: 10px;
+}
+
+.date-time-container, .text-oval-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    color: lightblue;
+    font-weight: bold;
+    font-size: 5em; /* Adjusted size */
+}
+
+.oval {
+    background-color: darkblue;
+    color: white;
+    border-radius: 50px; /* Creates the oval shape */
+    padding: 10px 40px; /* Adjusted padding */
+    font-weight: bold;
+    font-size: 5em; /* Adjusted size */
+}
+
+.date, .time {
+    font-weight: bold;
+    color: black;
+    font-size: 2em; /* Adjusted size */
 }
 
 #train {
