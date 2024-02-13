@@ -1,22 +1,14 @@
 const images = ['ticket1.png', 'ticket2.png']; // Paths to your images
-let currentImage = 0;
-
-function updateDateTime() {
-    const now = new Date();
-    const currentDateElement = document.getElementById('currentDate');
-    const currentTimeElement = document.getElementById('currentTime');
-    currentDateElement.textContent = now.toLocaleDateString('en-US');
-    currentTimeElement.textContent = now.toLocaleTimeString('en-US');
-}
-
-setInterval(updateDateTime, 1000); // Update the date and time every second
+let currentImage = -1; // Start with -1 to indicate the home.png is displayed initially
 
 document.getElementById('imageContainer').addEventListener('click', function() {
-    if (currentImage === 0) { // First click from home to ticket1
-        document.getElementById('mainImage').src = images[currentImage];
+    currentImage = (currentImage + 1) % images.length; // Advance to the next image
+
+    // Show the info box only if we are not showing home.png
+    if (currentImage === 0) { // When transitioning to the first image in the array
         document.getElementById('infoBox').classList.remove('hide');
-    } else { // Subsequent clicks between ticket1 and ticket2
-        document.getElementById('mainImage').src = images[currentImage];
     }
-    currentImage = (currentImage + 1) % images.length; // Loop through the images
+
+    // Update the image source. Use a conditional operator to decide whether to show home.png or a ticket image
+    document.getElementById('mainImage').src = currentImage >= 0 ? images[currentImage] : 'home.png';
 });
