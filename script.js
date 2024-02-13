@@ -1,16 +1,22 @@
-const images = ['ticket1.png', 'ticket2.png']; // Add the paths to your images here
+const images = ['ticket1.png', 'ticket2.png']; // Paths to your images
 let currentImage = 0;
 
-function updateClock() {
+function updateDateTime() {
     const now = new Date();
-    const clockElement = document.getElementById('clock');
-    clockElement.textContent = now.toLocaleTimeString();
+    const currentDateElement = document.getElementById('currentDate');
+    const currentTimeElement = document.getElementById('currentTime');
+    currentDateElement.textContent = now.toLocaleDateString('en-US');
+    currentTimeElement.textContent = now.toLocaleTimeString('en-US');
 }
 
-setInterval(updateClock, 1000); // Update the clock every second
+setInterval(updateDateTime, 1000); // Update the date and time every second
 
 document.getElementById('imageContainer').addEventListener('click', function() {
-    const mainImage = document.getElementById('mainImage');
-    mainImage.src = images[currentImage];
+    if (currentImage === 0) { // First click from home to ticket1
+        document.getElementById('mainImage').src = images[currentImage];
+        document.getElementById('infoBox').classList.remove('hide');
+    } else { // Subsequent clicks between ticket1 and ticket2
+        document.getElementById('mainImage').src = images[currentImage];
+    }
     currentImage = (currentImage + 1) % images.length; // Loop through the images
 });
