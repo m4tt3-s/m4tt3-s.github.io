@@ -20,8 +20,8 @@ document.getElementById('ticket').addEventListener('click', function() {
 
 function updateDateTime() {
     const now = new Date();
-    const currentDateElement = document.getElementById('date');
-    const currentTimeElement = document.getElementById('time');
+    const currentDateElement = document.getElementById('currentDate');
+    const currentTimeElement = document.getElementById('currentTime');
     currentDateElement.textContent = now.toLocaleDateString('en-US');
     currentTimeElement.textContent = now.toLocaleTimeString('en-US');
 }

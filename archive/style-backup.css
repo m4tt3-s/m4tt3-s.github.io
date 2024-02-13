@@ -1,0 +1,84 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#home, #ticket {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#home img {
+    width: 100%;
+    height: 100%;
+}
+
+#ticket img {
+    width: 100%;
+    height: 100%;
+}
+
+#ticket {
+    z-index: 10;
+    display: none; /* Initially hidden */
+    transform: translateY(100%); /* Start off-screen */
+    transition: transform 0.2s ease-in-out; /* Smooth transition for sliding in */
+}
+
+#topwrec {
+    height: 20vh;
+    background-color: white;
+
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse; 
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.date-time-container, .text-oval-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    color: #3C71FA;
+    font-weight: bold;
+    font-size: 5em; /* Adjusted size */
+}
+
+#oval-pad{
+    padding: 0px 0px; 
+}
+
+.oval {
+    background-color: #1A2C5C;
+    color: white;
+    border-radius: 60px; /* Creates the oval shape */
+    padding: 10px 40px; /* Adjusted padding */
+    font-weight: bold;
+    font-size: 5em; /* Adjusted size */
+}
+
+.date, .time {
+    font-weight: bold;
+    color: black;
+    font-size: 2em; /* Adjusted size */
+}
+
+#train {
+    height: 80vh;
+}
+
+.hidden {
+    display: none;
+}
