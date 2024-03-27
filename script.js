@@ -1,4 +1,4 @@
-document.getElementById('home').addEventListener('click', function() {
+document.getElementById('submit-button').addEventListener('click', function() {
     var ticket = document.getElementById('ticket');
     ticket.style.display = 'block'; // Ensure it's visible
     setTimeout(() => {
@@ -27,3 +27,12 @@ function updateDateTime() {
 }
 
 setInterval(updateDateTime, 1000); // Update the date and time every second
+
+const textInput = document.getElementById('text-input');
+const submitButton = document.getElementById('submit-button');
+const ovalElement = document.getElementById('oval');
+
+submitButton.addEventListener('click', function() {
+    const enteredText = textInput.value;
+    ovalElement.textContent = enteredText;
+});
