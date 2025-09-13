@@ -74,6 +74,7 @@ body, html {
     padding: 10px 40px; /* Adjusted padding */
     font-weight: bold;
     font-size: 4em; /* Adjusted size */
+    text-transform: uppercase; /* Force uppercase display */
 }
 
 #botwrec {
