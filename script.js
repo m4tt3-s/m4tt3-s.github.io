@@ -34,5 +34,5 @@ const ovalElement = document.getElementById('oval');
 
 submitButton.addEventListener('click', function() {
     const enteredText = textInput.value;
-    ovalElement.textContent = enteredText;
+    ovalElement.textContent = enteredText.toUpperCase();
 });
