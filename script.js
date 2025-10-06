@@ -31,8 +31,17 @@ setInterval(updateDateTime, 1000); // Update the date and time every second
 const textInput = document.getElementById('text-input');
 const submitButton = document.getElementById('submit-button');
 const ovalElement = document.getElementById('oval');
+const zoneCheckbox = document.getElementById('zone-checkbox');
+const zoneText = document.getElementById('text');
 
 submitButton.addEventListener('click', function() {
     const enteredText = textInput.value.trim();
     ovalElement.textContent = enteredText.toUpperCase();
+    
+    // Update zone text based on checkbox
+    if (zoneCheckbox.checked) {
+        zoneText.textContent = '1-3';
+    } else {
+        zoneText.textContent = '1-2';
+    }
 });
